@@ -19,18 +19,12 @@
     </head>
 
     <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper white">
-          <a href="index.php" class='brand-logo'><img src="img/logo.png" class="logo" alt="TrendHop"></a>
+      <header id="header">
+        <div class="row" id="nav-desktop">
+          <div class="col s12 m12 l12">
+            <img src="image/logo.png" alt="TrendHop" class="logo">
+          </div>
         </div>
-      </nav>
-    </div> 
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript">
-        $(".dropdown-button").dropdown(hover: false);
-      </script>
+      </header>
     </body>
   </html>
