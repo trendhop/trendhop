@@ -1,3 +1,42 @@
-.container {
-	width: 90%;
+.cb {
+	clear: both;
+}
+
+.header {
+	padding: 0 !important;
+}
+
+.header-row {
+	margin: 0;
+
+}
+
+.logo {
+	width: 50%;
+}
+
+.navigation {
+	padding: 0 !important;
+	height: 50px;
+	text-align: center;
+}
+
+.tab {
+	height: 50px;
+	border-right: 1px solid #ccc;
+	padding-top: 12px !important;
+
+}
+
+.tab:first-child {
+	border-left: 1px solid #ccc;
+	margin-left: 24% !important;
+}
+
+.tab a {
+	color: white;
+	text-transform: lowercase;
+	font-weight: bolder;
+	font-size: 25px;
+	background-position: center center;
 }

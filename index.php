@@ -15,10 +15,23 @@
     <body>
 
         
+        <div class="row header-row">
+          <div class="col s12 header">
+            <div class="col s6"><a href="index.php"><img src="img/logo-new-colour.png" alt="TrendHop" class="logo"></a></div>
+            <div class="col s6 right-align">Social</div>
+          </div>
+        </div>
         <div class="row">
-          <div class="col s12">
-            <div class="col s6">Logo</div>
-            <div class="col s6">Social</div>
+          <div class="col s12 navigation red darken-3">
+            <div class="col s2 tab">
+              <a href="index.php">Home</a>
+            </div>
+            <div class="col s2 tab">
+              <a href="index.php">About</a>
+            </div>
+            <div class="col s2 tab">
+              <a href="index.php">Categories</a>
+            </div>
           </div>
         </div>
       <!--Import jQuery before materialize.js-->
