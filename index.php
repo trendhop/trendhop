@@ -22,9 +22,50 @@
       <header id="header">
         <div class="row" id="nav-desktop">
           <div class="col s12 m12 l12">
-            <img src="image/logo.png" alt="TrendHop" class="logo">
+            <div class="logo">
+              <img src="image/logo.png" alt="TrendHop">
+            </div>
+            <div class="user_links right">
+              <span class="login_link">
+                <a href="auth/login.php">
+                  Login
+                </a>
+              </span>
+              <span class="login_link">
+                <a href="auth/register.php">
+                  Register
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="col s12 fixed">
+            <nav id="nav">
+              <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Categories</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
+      <div class="content">
+        
+      </div>
+      <div class="row main_content">
+        <div class="col s9 main_content">
+          <div class="slider">
+            <img src="http://placehold.it/960x520" alt="">
+          </div>
+        </div>
+        <div class="col s3 grey">
+          Sidebar
+        </div>
+      </div>
+    <!-- <footer id="footer">
+      <div class="col l12 m6 s3 teal">
+        footer
+      </div>
+    </footer> -->
     </body>
   </html>
