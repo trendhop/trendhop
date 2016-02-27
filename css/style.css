@@ -15,7 +15,7 @@
 	width: 20%;
 }
 
-nav a {
+nav a , .side-nav a{
 	color: #424242 !important;
 	font-size: 25px !important;
 	font-weight: bolder;
