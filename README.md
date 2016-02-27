@@ -1,2 +1,2 @@
 # trendhop
-test
+COMING SOON
