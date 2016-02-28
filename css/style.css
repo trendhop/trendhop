@@ -1,3 +1,7 @@
+body {
+	color: #424242;
+}
+
 .cb {
 	clear: both;
 }
@@ -9,6 +13,17 @@ a {
 a:hover {
 	color: #ee3223;
 }
+
+h1,h2,h3,h4,h5,h6 { 
+	font-weight: bolder; 
+	color: #ee3223;
+	padding-left: 10px
+}
+h1 { font-size: 2em; margin: .67em 0 }
+h2 { font-size: 1.5em; margin: .75em 0 }
+h3 { font-size: 1.17em; margin: .83em 0 }
+h5 { font-size: .83em; margin: 1.5em 0 }
+h6 { font-size: .75em; margin: 1.67em 0 }
 
 #header {
 	padding: 0 !important;
@@ -44,6 +59,7 @@ a:hover {
     float: left;
     position: relative;
     height: 29px;
+    width: 1000px;
 }
 
 .logo img{
@@ -69,4 +85,41 @@ a:hover {
 .main_content {
 	margin-bottom: 0 !important;
 	padding: 0 !important;
+}
+
+.slider {
+	height: auto !important;
+}
+
+.fresh_article {
+	width: 33.3% !important;
+	margin-top: 10px;
+	position: relative;
+}
+
+.fresh_image {
+	width: 100%;
+	height: 150px !important;
+	
+}
+
+.fresh_category {
+	background-color: rgba(238, 50, 35, 0.8);
+	border-radius: 3px;
+	padding: 10px;
+	text-align: center;
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	color: #fff;
+}
+
+.fresh_title a {
+	font-weight: bold;
+	text-transform: lowercase;
+	line-height: 18px;
+}
+
+.fresh_title a:hover {
+	color: #059eeb;
 }

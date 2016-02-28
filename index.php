@@ -1,3 +1,4 @@
+  <?php require_once "inc/db.php"; ?>
   <!DOCTYPE html>
   <html>
     <head>
@@ -38,12 +39,35 @@
               </span>
             </div>
           </div>
-          <div class="col s12 fixed">
+          <div class="col s12">
+            <ul id="dropdown1" class="dropdown-content">
+              <?php 
+              $query = "SELECT article_cat_id FROM articles";
+              $categoryQuery = mysqli_query($connectiom, $query);
+
+              while($row = mysqli_fetch_assoc($categoryQuery)) {
+                $article_cat_id = $row=['article_cat_id'];
+
+                $query = "SELECT * FROM categories WHERE id = $fresh_category";
+
+                $select_cat_id = mysqli_query($connection, $query);
+                while($row = mysqli_fetch_assoc($categoryQuery)) {
+                  $cat_id = $row['id'];
+                  $cat_title = $row['cat_title'];
+
+                  echo "<li><a href='$article_cat_id'>$cat_title</a></li>";
+                }
+              }
+            ?>
+            </ul>
+            
+            
+
             <nav id="nav">
               <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Categories</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
               </ul>
             </nav>
           </div>
@@ -57,7 +81,41 @@
           <div class="slider">
             <img src="http://placehold.it/960x520" alt="">
           </div>
+          
+          <div class="fresh">
+            <h2>Fresh Articles</h2>
+            <?php 
+              $query = "SELECT * FROM articles WHERE article_status = 'published' LIMIT 3";
+              $selectQuery = mysqli_query($connection, $query);
+
+              while($row = mysqli_fetch_assoc($selectQuery)) {
+                $fresh_image = $row['article_img'];
+                $fresh_category = $row['article_cat_id'];
+                $fresh_author = $row['article_author'];
+                $fresh_title = $row['article_title'];
+                $fresh_date = date('d/m/Y', strtotime($row['article_date']));
+
+                echo "<div class='col s3 fresh_article'>";
+                      echo "<img src='image/article_image/$fresh_image' class='fresh_image' alt='$fresh_image'>";
+                      $query = "SELECT * FROM categories WHERE id = $fresh_category";
+
+                      $select_cat_id = mysqli_query($connection, $query);
+
+                      while($row = mysqli_fetch_assoc($select_cat_id)) {
+                        $cat_id = $row['id'];
+                        $cat_title = $row['cat_title'];
+
+                        echo "<p class='fresh_category'>$cat_title</p>";
+                      }
+                      echo "<p class='fresh_author'>$fresh_author</p>";
+                      echo "<p class='fresh_title'><a href='#'>$fresh_title</a></p>";
+                      echo "<p class='fresh_date'>$fresh_date</p>";
+                echo "</div>";
+              }
+            ?>           
         </div>
+      </div>
+
         <div class="col s3 grey">
           Sidebar
         </div>
