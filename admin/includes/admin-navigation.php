@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">TrendHop Admin</a>
+                <a class="navbar-brand" href="index.php">TrendHop Admin V 0.1</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

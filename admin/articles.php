@@ -13,7 +13,7 @@
                 <div class="row">
                    <div class="col-lg-12">
                        <h1 class="page-header">
-                            TrendHop Admin V 0.1
+                            TrendHop Admin
 
                             <small>Welcome <?php echo $_SESSION['username'] ?></small><br>
                             <small>Any problems contact Jordie</small>
