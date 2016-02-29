@@ -91,10 +91,13 @@ h6 { font-size: .75em; margin: 1.67em 0 }
 	height: auto !important;
 }
 
+/**** Fresh Articles ****/
+
 .fresh_article {
 	width: 33.3% !important;
 	margin-top: 10px;
 	position: relative;
+	margin-bottom: 50px
 }
 
 .fresh_image {
@@ -122,4 +125,30 @@ h6 { font-size: .75em; margin: 1.67em 0 }
 
 .fresh_title a:hover {
 	color: #059eeb;
+}
+
+.fresh_author {
+	font-weight: bold;
+	text-transform: lowercase;
+	line-height: 18px;
+}
+
+.fresh_date {
+	font-weight: bold;
+	text-transform: lowercase;
+	line-height: 18px;
+}
+
+/**** Trending ****/
+
+.trend_info {
+	height: 225px;
+	float: right;
+}
+
+.trend_image {
+	width: 100%;
+	height: 225px;
+	float: left;
+	margin-top: 10px;
 }

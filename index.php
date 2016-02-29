@@ -40,29 +40,26 @@
             </div>
           </div>
           <div class="col s12">
-            <ul id="dropdown1" class="dropdown-content">
-              <?php 
+            <!--<ul id="dropdown1" class="dropdown-content">
+              <?php
               $query = "SELECT article_cat_id FROM articles";
-              $categoryQuery = mysqli_query($connectiom, $query);
+              $categoryQuery = mysqli_query($connection, $query);
 
-              while($row = mysqli_fetch_assoc($categoryQuery)) {
+              while($row = mysqli_fetch_array($categoryQuery)) {
                 $article_cat_id = $row=['article_cat_id'];
 
-                $query = "SELECT * FROM categories WHERE id = $fresh_category";
+                $query = "SELECT * FROM categories WHERE cat_id = $article_cat_id";
 
                 $select_cat_id = mysqli_query($connection, $query);
                 while($row = mysqli_fetch_assoc($categoryQuery)) {
-                  $cat_id = $row['id'];
+                  $cat_id = $row['cat_id'];
                   $cat_title = $row['cat_title'];
 
                   echo "<li><a href='$article_cat_id'>$cat_title</a></li>";
                 }
               }
             ?>
-            </ul>
-            
-            
-
+            </ul>-->
             <nav id="nav">
               <ul>
                 <li><a href="index.php">Home</a></li>
@@ -114,6 +111,29 @@
               }
             ?>           
         </div>
+
+        <div class="trending">
+          <h3>Trending!</h3>
+          <div class="row">
+            <div class="col s9">
+              <div class="col s6">
+                <div class="trend">
+                  <img src="image/article_image/ainsleybanister.jpg" class="trend_image">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s9">
+              <div class="col s6">
+                <div class="trend">
+                  <img src="image/article_image/ainsleybanister.jpg" class="trend_image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
         <div class="col s3 grey">
@@ -125,5 +145,8 @@
         footer
       </div>
     </footer> -->
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
   </html>
