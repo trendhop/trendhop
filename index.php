@@ -121,6 +121,10 @@
                   <img src="image/article_image/ainsleybanister.jpg" class="trend_image">
                 </div>
               </div>
+
+              <div class="col s3">
+                
+              </div>
             </div>
           </div>
 
