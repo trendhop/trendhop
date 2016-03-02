@@ -141,6 +141,19 @@ h6 { font-size: .75em; margin: 1.67em 0 }
 
 /**** Trending ****/
 
+.trend_row {
+	background-color: #F9F9F9;
+	padding: 5px;
+	margin-bottom: 0 !important;
+	border-top: 1px solid #bababa;
+	border-bottom: 1px solid #bababa;
+	border-right: 1px solid #bababa;
+}
+
+.trend_row:hover {
+	background-color: #E2E2E2;
+}
+
 .trend_info {
 	height: 225px;
 	float: right;
@@ -150,4 +163,45 @@ h6 { font-size: .75em; margin: 1.67em 0 }
 	width: 100%;
 	height: 225px;
 	float: left;
+}
+
+.trend_content {
+	width: 50% !important;	
+}
+
+.trend_title {
+	font-size: 27px;
+}
+
+/*** Sidebar ***/
+.sidebar {
+	padding: 0px 0 0 20px !important;
+}
+
+
+.sidebar_trend_article {
+	width: 100%;
+	background-color: #F9F9F9;
+	padding: 5px;
+	margin-bottom: 0 !important;
+	border-top: 1px solid #bababa;
+	border-bottom: 1px solid #bababa;
+	border-left: 1px solid #bababa;
+}
+
+.sidebar_trend_article:hover {
+	background-color: #E2E2E2;
+}
+
+.sidebar_thumb {
+	width: 34%;
+	height: 54px;
+	float: left;
+}
+
+.sidebar_title {
+	font-size: 18px;
+	text-transform: lowercase;
+	font-weight: normal;
+	padding-left: 100px;
 }

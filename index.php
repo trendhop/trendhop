@@ -77,9 +77,9 @@
           </div>
           
           <div class="fresh">
-            <h2>Fresh Articles</h2>
+            <h3>Fresh Articles</h3>
             <?php 
-              $query = "SELECT * FROM articles WHERE article_status = 'published' LIMIT 3";
+              $query = "SELECT * FROM articles WHERE article_status = 'published' ORDER BY article_id DESC LIMIT 3";
               $selectQuery = mysqli_query($connection, $query);
 
               while($row = mysqli_fetch_assoc($selectQuery)) {
@@ -122,24 +122,26 @@
                 $fresh_title = $row['article_title'];
                 $fresh_date = date('d/m/Y', strtotime($row['article_date']));
 
-                echo "<div class='row'>";
-                      echo "<div class='col s9'>";
+                echo "<div class='row trend_row'>";
+                      echo "<div class='col s9 trend_col'>";
                       echo "<div class='col s6'>";
                       echo "<img src='image/article_image/$fresh_image' class='trend_image' alt='$fresh_image'>";
                       echo "</div>";
-                      $query = "SELECT * FROM categories WHERE id = $fresh_category";
-
-                      $select_cat_id = mysqli_query($connection, $query);
-
-                      while($row = mysqli_fetch_assoc($select_cat_id)) {
-                        $cat_id = $row['id'];
-                        $cat_title = $row['cat_title'];
-
-                        echo "<p class='trend_category'>$cat_title</p>";
-                      }
+                      echo "<div class='col s3 trend_content'>";
                       echo "<p class='trend_author'>$fresh_author</p>";
-                      echo "<p class='trend_title'><a href='#'>$fresh_title</a></p>";
-                      echo "<p class='trend_date'>$fresh_date</p>";
+                        echo "<p class='trend_title'><a href='#'>$fresh_title</a></p>";
+                        echo "<p class='trend_date'>$fresh_date</p>";
+                        $query = "SELECT * FROM categories WHERE id = $fresh_category";
+  
+                        $select_cat_id = mysqli_query($connection, $query);
+  
+                        while($row = mysqli_fetch_assoc($select_cat_id)) {
+                          $cat_id = $row['id'];
+                          $cat_title = $row['cat_title'];
+  
+                          echo "<p class='trend_category'>$cat_title</p>";
+                        }
+                      echo "</div>";
                 echo "</div>";
                 echo "</div>";
               }
@@ -147,8 +149,26 @@
          </div>
        </div>
 
-        <div class="col s3 grey">
-          Sidebar
+        <div class="col s3 sidebar">
+          <h3>Trending Now</h3>
+          <div class="trend_sidebar">
+            <?php 
+              $query = "SELECT * FROM articles WHERE article_status = 'published' LIMIT 6";
+              $trendQuery = mysqli_query($connection, $query);
+
+              while($row = mysqli_fetch_assoc($trendQuery)) {
+                $side_id = $row['article_id'];
+                $side_image = $row['article_img'];
+                $side_title = $row['article_title'];
+
+                echo "<div class='sidebar_trend_article'>";
+                  echo "<img src='image/article_image/$side_image' class='sidebar_thumb'>";
+                  echo "<p class='sidebar_title'>$side_title</p>";
+                  echo "<div class='cb'></div>";
+                echo "</div>";
+              }
+            ?> 
+          </div>
         </div>
       </div>
     <!-- <footer id="footer">

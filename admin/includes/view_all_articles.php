@@ -49,7 +49,7 @@
                     }
 
                     echo "<td>$article_status</td>";
-                    echo "<td><img width='100' src='../img/article_img/$article_image'></td>";
+                    echo "<td><img width='100' src='../image/article_image/$article_image'></td>";
                     echo "<td>$article_tags</td>";
                     echo "<td>$article_comments</td>";
                     echo "<td>$article_date</td>";  

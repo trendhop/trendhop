@@ -13,7 +13,7 @@
 		$content = mysqli_real_escape_string($connection, $_POST['content']);
 		$date = date('d-m-y');
 
-		move_uploaded_file($image_temp, "../img/article_img/$image");
+		move_uploaded_file($image_temp, "../image/article_image/$image");
 
 		//add article query
 
