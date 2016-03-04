@@ -1,4 +1,4 @@
-<div class="row main_content">
+<div class="row">
   <div class="col s9 main_content">
     <ul id="out-of-the-box-demo">
       <li>
